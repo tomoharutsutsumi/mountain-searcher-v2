@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MountainController {
 
-    @GetMapping("/home")
-    public String home(Model model) {
+    @GetMapping("/index")
+    public String index(Model model) {
         model.addAttribute("name", "John");
-        return "home";  // This refers to home.html template
+        return "index";  // This refers to home.html template
     }
 }
