@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.demo.DemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-21T03:51:04" hostname="tsutsumichiharus-MacBook-Pro.local" time="0.498">
+<testsuite name="com.example.demo.DemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-21T03:57:34" hostname="tsutsumichiharus-MacBook-Pro.local" time="0.477">
   <properties/>
-  <testcase name="contextLoads()" classname="com.example.demo.DemoApplicationTests" time="0.498"/>
-  <system-out><![CDATA[20:51:03.530 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-20:51:03.575 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
+  <testcase name="contextLoads()" classname="com.example.demo.DemoApplicationTests" time="0.477"/>
+  <system-out><![CDATA[20:57:33.986 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:57:34.026 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,9 +13,9 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.3)
 
-2023-09-20T20:51:03.711-07:00  INFO 5981 --- [    Test worker] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 20.0.2 with PID 5981 (started by tsutsumitomoharu in /Users/tsutsumitomoharu/Desktop/projects/mountain-searcher)
-2023-09-20T20:51:03.712-07:00  INFO 5981 --- [    Test worker] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2023-09-20T20:51:04.159-07:00  INFO 5981 --- [    Test worker] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 0.531 seconds (process running for 1.053)
+2023-09-20T20:57:34.178-07:00  INFO 6440 --- [    Test worker] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 20.0.2 with PID 6440 (started by tsutsumitomoharu in /Users/tsutsumitomoharu/Desktop/projects/mountain-searcher)
+2023-09-20T20:57:34.179-07:00  INFO 6440 --- [    Test worker] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-09-20T20:57:34.660-07:00  INFO 6440 --- [    Test worker] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 0.582 seconds (process running for 1.163)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
