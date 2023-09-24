@@ -1,15 +1,3 @@
-<!-- <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page!</h1>
-    <p th:text="'Hello, ' + ${name} + '!'"></p>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -31,14 +19,14 @@
             </tr>
         </thead>
         <tbody>
-            <!-- <tr th:each="mountain : ${mountains}">
+            <tr th:each="mountain : ${mountains}">
                 <td th:text="${mountain.id}"></td>
                 <td th:text="${mountain.name}"></td>
                 <td th:text="${mountain.prefecture}"></td>
                 <td th:text="${mountain.hasTentSite}"></td>
                 <td th:text="${mountain.latitude}"></td>
                 <td th:text="${mountain.longitude}"></td>
-            </tr> -->
+            </tr>
         </tbody>
     </table>
 </body>

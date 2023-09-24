@@ -8,17 +8,15 @@ public class Mountain {
     private float latitude;
     private float longitude;
 
-    // Constructor
     public Mountain(int id, String name, String prefecture, boolean hasTentSite, float latitude, float longitude) {
         this.id = id;
-        setName(name); // Using setters here ensures any validation logic is used during construction.
+        setName(name);
         setPrefecture(prefecture);
         this.hasTentSite = hasTentSite;
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    // Getters
     public int getId() {
         return id;
     }
@@ -43,7 +41,6 @@ public class Mountain {
         return longitude;
     }
 
-    // Setters
     public void setName(String name) {
         if (name != null && name.length() <= 20) {
             this.name = name;
@@ -59,7 +56,4 @@ public class Mountain {
             throw new IllegalArgumentException("Prefecture should be non-null and up to 20 characters.");
         }
     }
-
-    // Here, we're assuming `id`, `hasTentSite`, `latitude`, and `longitude` shouldn't be changed after the object is instantiated.
-    // So, we don't provide setters for them.
 }
