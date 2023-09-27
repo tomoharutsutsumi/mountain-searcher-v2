@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page!</h1>
+
+    <!-- Display the list of Mountains -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Prefecture</th>
+                <th>Has Tent Site</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="mountain : ${mountains}">
+                <td th:text="${mountain.id}"></td>
+                <td th:text="${mountain.name}"></td>
+                <td th:text="${mountain.prefecture}"></td>
+                <td th:text="${mountain.hasTentSite}"></td>
+                <td th:text="${mountain.latitude}"></td>
+                <td th:text="${mountain.longitude}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
