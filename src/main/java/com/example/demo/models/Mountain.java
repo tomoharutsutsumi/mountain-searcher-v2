@@ -25,6 +25,10 @@ public class Mountain {
         this.longitude = longitude;
     }
 
+    public Mountain() {
+        // Default constructor
+    }
+
     public int getId() {
         return id;
     }
