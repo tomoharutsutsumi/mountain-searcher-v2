@@ -48,5 +48,8 @@ public class DatabaseSeeder {
 
         // Close connections, etc.
     }
-}
+
+    private mountainData() {
+        return 
+    }
 }
