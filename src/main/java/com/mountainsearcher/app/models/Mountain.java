@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.mountainsearcher.app.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

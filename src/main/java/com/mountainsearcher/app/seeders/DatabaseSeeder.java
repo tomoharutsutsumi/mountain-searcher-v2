@@ -1,6 +1,7 @@
-package com.example.demo.seeders;
+package com.mountainsearcher.app.seeders;
 
-import com.example.models.Mountain;
+import com.mountainsearcher.app.models.Mountain;
+import com.mountainsearcher.app.repositories.MountainRepository
 
 
 public class DatabaseSeeder {
@@ -16,7 +17,7 @@ public class DatabaseSeeder {
 
         // User user2 = new User();
         // user2.setName("Jane Smith");
-        // user2.setEmail("jane@example.com");
+        // user2.setEmail("jane@example.com")
         // // ... save user2 to the database
 
         // Close connections, etc.
