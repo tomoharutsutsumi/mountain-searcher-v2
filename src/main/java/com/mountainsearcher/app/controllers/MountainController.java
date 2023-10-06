@@ -1,5 +1,5 @@
 package com.mountainsearcher.app.controllers;
-import com.mountainsearcher.app.Mountain;
+import com.mountainsearcher.app.models.Mountain;
 import org.springframework.stereotype.Controller;
 import com.mountainsearcher.app.repositories.MountainRepository;
 import org.springframework.beans.factory.annotation.Autowired;
