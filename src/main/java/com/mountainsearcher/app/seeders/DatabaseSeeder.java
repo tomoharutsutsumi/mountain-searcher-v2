@@ -7,10 +7,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DatabaseSeeder {
-    @Autowired
-    private static MountainRepository mountainRepository;
 
-    public static void run() {
+    private final MountainRepository mountainRepository;
+
+    @Autowired
+    public DatabaseSeeder(MountainRepository mountainRepository) {
+        this.mountainRepository = mountainRepository;
+    }
+
+    public void seedData() {
         Mountain[] mountains = mountainData();
         for (Mountain m : mountains) {
           mountainRepository.save(m);
@@ -24,6 +29,7 @@ public class DatabaseSeeder {
         };
     }
 }
+
 
 
 // // INSERT INTO mountains (name, longitude, latitude, location) VALUES

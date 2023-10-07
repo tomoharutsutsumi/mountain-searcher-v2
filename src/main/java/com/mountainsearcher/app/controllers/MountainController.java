@@ -31,3 +31,23 @@ public class MountainController {
         return "home";  // This refers to home.html template
     }
 }
+
+
+// @Controller
+// public class MountainController {
+
+//     private final MountainRepository mountainRepository;
+
+//     @Autowired
+//     public MountainController(MountainRepository mountainRepository) {
+//         this.mountainRepository = mountainRepository;
+//     }
+
+//     @GetMapping("/")
+//     public String home(Model model) {
+//         Mountain mountain = new Mountain(1, "MountainA", "PrefectureA", true, 12.345f, 54.321f);
+//         mountainRepository.save(mountain);
+//         model.addAttribute("mountains", mountainRepository.findAll());
+//         return "home";  // This refers to home.html template
+//     }
+// }
