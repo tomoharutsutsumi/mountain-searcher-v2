@@ -1,40 +1,29 @@
-// package com.mountainsearcher.app.seeders;
+package com.mountainsearcher.app.seeders;
 
-// import com.mountainsearcher.app.models.Mountain;
-// import com.mountainsearcher.app.repositories.MountainRepository
+import com.mountainsearcher.app.models.Mountain;
+import com.mountainsearcher.app.repositories.MountainRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
+public class DatabaseSeeder {
+    @Autowired
+    private static MountainRepository mountainRepository;
 
-// public class DatabaseSeeder {
-//     public static void main(String[] args) {
-//         // Setup EntityManager, Session, etc. depending on your ORM
-        
+    public static void run() {
+        Mountain[] mountains = mountainData();
+        for (Mountain m : mountains) {
+          mountainRepository.save(m);
+        }
+    }
 
-//         // // Example seeding data
-//         // User user1 = new User();
-//         // user1.setName("John Doe");
-//         // user1.setEmail("john@example.com");
-//         // // ... save user1 to the database
-
-//         // User user2 = new User();
-//         // user2.setName("Jane Smith");
-//         // user2.setEmail("jane@example.com")
-//         // // ... save user2 to the database
-
-//         // Close connections, etc.
-//         mountains = mountainData()
-//         for (Mountain m : mountains) {
-//           m.save
-//         }
-//     }
-
-//     private Mountain[] mountainData() {
-//         Mountain[] mountains = {
-//             new MountainInfo(1, "Grouse Mountain", -123.0834, 49.3808, "North Vancouver, BC"),
-//             new MountainInfo(2, "Mount Seymour", -122.9499, 49.3676, "North Vancouver, BC")
-//         };
-//         return mountains
-//     }
-// }
+    private Mountain[] mountainData() {
+        return new Mountain[] {
+            new Mountain(2, "Grouse Mountain", -123.0834, 49.3808, "North Vancouver, BC"),
+            new Mountain(3, "Mount Seymour", -122.9499, 49.3676, "North Vancouver, BC")
+        };
+    }
+}
 
 
 // // INSERT INTO mountains (name, longitude, latitude, location) VALUES
