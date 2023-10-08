@@ -4,9 +4,10 @@ import com.mountainsearcher.app.models.Mountain;
 import com.mountainsearcher.app.repositories.MountainRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.boot.CommandLineRunner;
 
 @Component
-public class DatabaseSeeder {
+public class DatabaseSeeder implements CommandLineRunner {
 
     private final MountainRepository mountainRepository;
 
@@ -18,14 +19,16 @@ public class DatabaseSeeder {
     public void seedData() {
         Mountain[] mountains = mountainData();
         for (Mountain m : mountains) {
-          mountainRepository.save(m);
+            if(m.getId()){
+                mountainRepository.save(m);
+            } 
         }
     }
 
     private Mountain[] mountainData() {
         return new Mountain[] {
-            new Mountain(2, "Grouse Mountain", -123.0834, 49.3808, "North Vancouver, BC"),
-            new Mountain(3, "Mount Seymour", -122.9499, 49.3676, "North Vancouver, BC")
+            new Mountain(1, "Grouse Mountain", -123.0834, 49.3808, "North Vancouver, BC"),
+            new Mountain(2, "Mount Seymour", -122.9499, 49.3676, "North Vancouver, BC")
         };
     }
 }
