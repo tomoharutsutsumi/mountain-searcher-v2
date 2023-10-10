@@ -19,7 +19,7 @@ public class DatabaseSeeder implements CommandLineRunner {
     public void seedData() {
         Mountain[] mountains = mountainData();
         for (Mountain m : mountains) {
-            if(m.getId()){
+            if(!mountainRepository.existsById(m.getId())){
                 mountainRepository.save(m);
             } 
         }
