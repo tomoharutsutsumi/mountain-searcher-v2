@@ -12,15 +12,15 @@ public class Mountain {
     private int id;
     private String name;
     private String prefecture;
-    private boolean hasTentSite;
+    // private boolean hasTentSite;
     private float latitude;
     private float longitude;
 
-    public Mountain(int id, String name, String prefecture, boolean hasTentSite, float latitude, float longitude) {
+    public Mountain(int id, String name, float latitude, float longitude, String prefecture) {
         this.id = id;
         setName(name);
         setPrefecture(prefecture);
-        this.hasTentSite = hasTentSite;
+        // this.hasTentSite = hasTentSite;
         this.latitude = latitude;
         this.longitude = longitude;
     }
@@ -41,9 +41,9 @@ public class Mountain {
         return prefecture;
     }
 
-    public boolean isHasTentSite() {
-        return hasTentSite;
-    }
+    // public boolean isHasTentSite() {
+    //     return hasTentSite;
+    // }
 
     public float getLatitude() {
         return latitude;
