@@ -10,13 +10,13 @@ public class Mountain {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String name;
-    private String prefecture;
+    private String name;    
     // private boolean hasTentSite;
-    private float latitude;
-    private float longitude;
+    private double latitude;
+    private double longitude;
+    private String prefecture;
 
-    public Mountain(int id, String name, float latitude, float longitude, String prefecture) {
+    public Mountain(int id, String name, double latitude, double longitude, String prefecture) {
         this.id = id;
         setName(name);
         setPrefecture(prefecture);
@@ -45,11 +45,11 @@ public class Mountain {
     //     return hasTentSite;
     // }
 
-    public float getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public float getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
