@@ -22,7 +22,7 @@ public class MountainController {
         //         new Mountain(3, "MountainC", "PrefectureC", true, 34.567f, 76.543f)
         // );
 
-        Mountain mountain = new Mountain(1, "MountainA", "PrefectureA", true, 12.345f, 54.321f);
+        Mountain mountain = new Mountain(1, "MountainA", 12.345f, 54.321f, "PrefectureA");
         mountainRepository.save(mountain);
 
         // Add the list to the model
