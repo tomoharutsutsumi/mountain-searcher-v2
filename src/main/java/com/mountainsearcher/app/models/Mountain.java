@@ -54,7 +54,7 @@ public class Mountain {
     }
 
     public void setName(String name) {
-        if (name != null && name.length() <= 20) {
+        if (name != null && name.length() <= 50) {
             this.name = name;
         } else {
             throw new IllegalArgumentException("Name should be non-null and up to 20 characters.");
@@ -62,7 +62,7 @@ public class Mountain {
     }
 
     public void setPrefecture(String prefecture) {
-        if (prefecture != null && prefecture.length() <= 20) {
+        if (prefecture != null && prefecture.length() <= 50) {
             this.prefecture = prefecture;
         } else {
             throw new IllegalArgumentException("Prefecture should be non-null and up to 20 characters.");
