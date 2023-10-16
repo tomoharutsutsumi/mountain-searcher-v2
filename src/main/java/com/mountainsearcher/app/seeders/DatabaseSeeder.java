@@ -16,7 +16,7 @@ public class DatabaseSeeder implements CommandLineRunner {
         this.mountainRepository = mountainRepository;
     }
 
-    public void run() {
+    public void run(String... arg) {
         Mountain[] mountains = mountainData();
         for (Mountain m : mountains) {
             if(!mountainRepository.existsById(m.getId())){
