@@ -20,7 +20,7 @@ public class DatabaseSeeder implements CommandLineRunner {
     public void run(String... arg) {
         Mountain[] mountains = mountainData();
         for (Mountain m : mountains) {
-            if(!mountainRepository.existsById(m.getId())){ // need to check name?
+            if(!mountainRepository.existsByName(m.getName())){
                 mountainRepository.save(m);
             } 
         }
