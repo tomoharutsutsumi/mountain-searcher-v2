@@ -16,10 +16,11 @@ public class DatabaseSeeder implements CommandLineRunner {
         this.mountainRepository = mountainRepository;
     }
 
+    // transaction
     public void run(String... arg) {
         Mountain[] mountains = mountainData();
         for (Mountain m : mountains) {
-            if(!mountainRepository.existsById(m.getId())){
+            if(!mountainRepository.existsById(m.getId())){ // need to check name?
                 mountainRepository.save(m);
             } 
         }
