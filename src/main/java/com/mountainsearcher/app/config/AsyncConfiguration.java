@@ -22,8 +22,11 @@ public class WeatherService {
     }
 
     private WeatherData fetchWeather(Mountain mountain) {
-        // Assume you have an API URL that takes a mountain name or ID and returns weather data
+
+        //https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=weathercode&timezone=America%2FLos_Angeles&start_date=2023-10-21&end_date=2023-10-22
         String apiUrl = "https://weatherapi.com/getWeather?mountain=" + mountain.getName();
         return restTemplate.getForObject(apiUrl, WeatherData.class);
     }
 }
+
+//  caching should be used as well.

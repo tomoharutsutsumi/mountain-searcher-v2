@@ -31,7 +31,7 @@ public class MountainController {
         return "home";  // This refers to home.html template
     }
 }
-//https://open-meteo.com/
+
 
 
 // @Controller
