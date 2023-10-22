@@ -22,11 +22,12 @@ public class WeatherService {
     }
 
     private WeatherData fetchWeather(Mountain mountain) {
-
-        //https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=weathercode&timezone=America%2FLos_Angeles&start_date=2023-10-21&end_date=2023-10-22
-        String apiUrl = "https://weatherapi.com/getWeather?mountain=" + mountain.getName();
+        String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
+            + "&longitude=" + mountain.getLongitude()
+            + "&daily=weathercode&timezone=auto";
         return restTemplate.getForObject(apiUrl, WeatherData.class);
     }
 }
 
 //  caching should be used as well.
+// wanna check how fast caching is 
