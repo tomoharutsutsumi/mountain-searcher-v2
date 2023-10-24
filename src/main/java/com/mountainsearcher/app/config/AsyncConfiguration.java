@@ -27,7 +27,8 @@ public class WeatherService {
             + "&longitude=" + mountain.getLongitude()
             + "&daily=weathercode&timezone=auto";
     String result = restTemplate.getForObject(uri, String.class); //define object
-    // {"latitude":52.52,"longitude":13.419998,"generationtime_ms":0.00095367431640625,"utc_offset_seconds":0,"timezone":"GMT","timezone_abbreviation":"GMT","elevation":38.0}
+    //curl "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=weathercode&timezone=America%2FLos_Angeles&start_date=2023-10-21&end_date=2023-10-22"
+//{"latitude":52.52,"longitude":13.419998,"generationtime_ms":0.015974044799804688,"utc_offset_seconds":-25200,"timezone":"America/Los_Angeles","timezone_abbreviation":"PDT","elevation":38.0,"daily_units":{"time":"iso8601","weathercode":"wmo code"},"daily":{"time":["2023-10-21","2023-10-22"],"weathercode":[80,3]}}
 
     System.out.println(result);
 
