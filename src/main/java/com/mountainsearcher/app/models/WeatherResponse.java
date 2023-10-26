@@ -16,6 +16,21 @@ public class WeatherResponse {
     private String timezone;
     private String timezone_abbreviation;
     private double elevation;
+    private DailyUnits daily_units;
+    private Daily daily;
 
+    private class DailyUnits {
+        private String time;          // Corresponds to "time":"iso8601"
+        private String weathercode;   // Corresponds to "weathercode":"wmo code"
+
+        // Constructors, getters, setters for DailyUnits omitted for brevity
+    }
+
+    private class Daily {
+        private List<String> time;                 // Corresponds to "time":["2023-10-21","2023-10-22"]
+        private List<Integer> weathercode;         // Corresponds to "weathercode":[80,3]
+
+        // Constructors, getters, setters for Daily omitted for brevity
+    }
     
 }
