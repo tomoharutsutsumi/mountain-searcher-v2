@@ -2,6 +2,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.concurrent.CompletableFuture;
 import java.util.List;
 import java.util.stream.Collectors;
+import com.mountainsearcher.app.models.WeatherResponse;
 
 public class WeatherService {
 
