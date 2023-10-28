@@ -16,20 +16,16 @@ public class MountainController {
 
     @GetMapping("/")
     public String home(Model model) {
-        // List<Mountain> mountains = Arrays.asList(
-        //         new Mountain(1, "MountainA", "PrefectureA", true, 12.345f, 54.321f),
-        //         new Mountain(2, "MountainB", "PrefectureB", false, 23.456f, 65.432f),
-        //         new Mountain(3, "MountainC", "PrefectureC", true, 34.567f, 76.543f)
-        // );
-
-        // Mountain mountain = new Mountain(1, "MountainA", 12.345f, 54.321f, "PrefectureA");
-        // mountainRepository.save(mountain);
-
-        // Add the list to the model
         model.addAttribute("mountains", mountainRepository.findAll());
-
-        return "home";  // This refers to home.html template
+        return "home";
     }
+
+    @GetMapping("/search")
+    public String search(Model model) {
+        // model.addAttribute("mountains", mountainRepository.findAll());
+        // return "home";
+    }
+
 }
 
 
