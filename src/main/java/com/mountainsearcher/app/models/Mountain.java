@@ -16,13 +16,14 @@ public class Mountain {
     private double longitude;
     private String prefecture;
 
-    public Mountain(int id, String name, double latitude, double longitude, String prefecture) {
+    public Mountain(int id, String name, double latitude, double longitude, String prefecture, int height) {
         this.id = id;
         setName(name);
         setPrefecture(prefecture);
         // this.hasTentSite = hasTentSite;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.height = height
     }
 
     public Mountain() {
@@ -51,6 +52,10 @@ public class Mountain {
 
     public double getLongitude() {
         return longitude;
+    }
+
+    public int getHeight(){
+        return height
     }
 
     public void setName(String name) {
