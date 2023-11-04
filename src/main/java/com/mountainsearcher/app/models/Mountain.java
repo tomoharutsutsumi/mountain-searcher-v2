@@ -15,6 +15,7 @@ public class Mountain {
     private double latitude;
     private double longitude;
     private String prefecture;
+    private int height;
 
     public Mountain(int id, String name, double latitude, double longitude, String prefecture, int height) {
         this.id = id;
@@ -55,22 +56,22 @@ public class Mountain {
     }
 
     public int getHeight(){
-        return height
+        return height;
     }
 
-    public void setName(String name) {
-        if (name != null && name.length() <= 50) {
-            this.name = name;
-        } else {
-            throw new IllegalArgumentException("Name should be non-null and up to 20 characters.");
-        }
-    }
+    // public void setName(String name) {
+    //     if (name != null && name.length() <= 50) {
+    //         this.name = name;
+    //     } else {
+    //         throw new IllegalArgumentException("Name should be non-null and up to 20 characters.");
+    //     }
+    // }
 
-    public void setPrefecture(String prefecture) {
-        if (prefecture != null && prefecture.length() <= 50) {
-            this.prefecture = prefecture;
-        } else {
-            throw new IllegalArgumentException("Prefecture should be non-null and up to 20 characters.");
-        }
-    }
+    // public void setPrefecture(String prefecture) {
+    //     if (prefecture != null && prefecture.length() <= 50) {
+    //         this.prefecture = prefecture;
+    //     } else {
+    //         throw new IllegalArgumentException("Prefecture should be non-null and up to 20 characters.");
+    //     }
+    // }
 }
