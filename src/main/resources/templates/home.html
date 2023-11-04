@@ -25,12 +25,13 @@
     </table>
     <body>
         <form action="#" th:action="@{/search}" method="get">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <br>
+            <label for="cars">Choose a car:</label>
+            <select id="height" name="height">
+                <option value="3000">higher than 3000</option>
+                <option value="2000">higher than 2000</option>
+                <option value="1000">higher than 1000</option>
+                <option value="1">lower than 999</option>
+            </select>
             <input type="submit" value="Submit">
             weather
             far from waterfront
