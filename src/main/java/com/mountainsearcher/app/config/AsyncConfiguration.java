@@ -6,7 +6,7 @@ import com.mountainsearcher.app.models.WeatherResponse;
 
 public class WeatherService {
 
-    private final RestTemplate restTemplate;
+    private final RestTemplate restTemplate = new RestTemplate();
 
     // public WeatherService() {
     //     this.restTemplate = new RestTemplate();
@@ -21,17 +21,18 @@ public class WeatherService {
     //         .map(CompletableFuture::join)
     //         .collect(Collectors.toList());
     // }
-
-
-    RestTemplate restTemplate = new RestTemplate();
-    String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
+    public GetWeatherData(){
+        String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
             + "&longitude=" + mountain.getLongitude()
             + "&daily=weathercode&timezone=auto";
-    String result = restTemplate.getForObject(apiuri, WeatherResponse.class); //define object
+        String result = restTemplate.getForObject(apiuri, WeatherResponse.class);
+        System.out.println(result);
+    }
+    //define object
     //curl "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=weathercode&timezone=America%2FLos_Angeles&start_date=2023-10-21&end_date=2023-10-22"
 //{"latitude":52.52,"longitude":13.419998,"generationtime_ms":0.015974044799804688,"utc_offset_seconds":-25200,"timezone":"America/Los_Angeles","timezone_abbreviation":"PDT","elevation":38.0,"daily_units":{"time":"iso8601","weathercode":"wmo code"},"daily":{"time":["2023-10-21","2023-10-22"],"weathercode":[80,3]}}
 
-    System.out.println(result);
+   
 
     // private WeatherData fetchWeather(Mountain mountain) {
     //     String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
