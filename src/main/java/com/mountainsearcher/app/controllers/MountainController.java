@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Arrays;
 import java.util.List;
+import com.mountainsearcher.app.config.AsyncCOnfiguration.java;
 
 @Controller
 public class MountainController {
@@ -22,6 +23,7 @@ public class MountainController {
 
     @GetMapping("/search")
     public String search(Model model) {
+        WeatherService.GetWeatherData()
         // model.addAttribute("mountains", mountainRepository.findAll());
         // return "home";
     }

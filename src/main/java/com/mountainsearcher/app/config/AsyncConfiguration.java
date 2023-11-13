@@ -21,7 +21,7 @@ public class WeatherService {
     //         .map(CompletableFuture::join)
     //         .collect(Collectors.toList());
     // }
-    public GetWeatherData(){
+    public static GetWeatherData(){
         String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
             + "&longitude=" + mountain.getLongitude()
             + "&daily=weathercode&timezone=auto";
