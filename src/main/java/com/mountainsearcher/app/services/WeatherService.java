@@ -1,3 +1,4 @@
+package com.mountainsearcher.app.services;
 import org.springframework.web.client.RestTemplate;
 import java.util.concurrent.CompletableFuture;
 import java.util.List;

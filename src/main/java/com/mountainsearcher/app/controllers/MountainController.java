@@ -1,5 +1,4 @@
 package com.mountainsearcher.app.controllers;
-import com.mountainsearcher.app.services.*;aaa
 import com.mountainsearcher.app.models.Mountain;
 import org.springframework.stereotype.Controller;
 import com.mountainsearcher.app.services.WeatherService;
@@ -16,6 +15,9 @@ public class MountainController {
     @Autowired
     private MountainRepository mountainRepository;
 
+    // @Autowired
+    // private WeatherService weatherService;
+
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("mountains", mountainRepository.findAll());
@@ -24,7 +26,7 @@ public class MountainController {
 
     @GetMapping("/search")
     public String search(Model model) {
-        WeatherService.getWeatherData();
+        WeatherService.GetWeatherData();
         // model.addAttribute("mountains", mountainRepository.findAll());
         // return "home";
     }
