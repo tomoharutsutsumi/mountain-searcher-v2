@@ -1,13 +1,14 @@
 package com.mountainsearcher.app.controllers;
+import com.mountainsearcher.app.services.*;
 import com.mountainsearcher.app.models.Mountain;
 import org.springframework.stereotype.Controller;
+import com.mountainsearcher.app.services.WeatherService;
 import com.mountainsearcher.app.repositories.MountainRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Arrays;
 import java.util.List;
-import com.mountainsearcher.app.config.AsyncCOnfiguration.java;
 
 @Controller
 public class MountainController {
@@ -23,11 +24,10 @@ public class MountainController {
 
     @GetMapping("/search")
     public String search(Model model) {
-        WeatherService.GetWeatherData()
+        WeatherService.getWeatherData();
         // model.addAttribute("mountains", mountainRepository.findAll());
         // return "home";
     }
-
 }
 
 

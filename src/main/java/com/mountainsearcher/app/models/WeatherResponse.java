@@ -3,6 +3,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.util.List;
+
 
 @Entity
 public class WeatherResponse {
@@ -27,8 +29,8 @@ public class WeatherResponse {
     }
 
     private class Daily {
-        private List<String> time;                 // Corresponds to "time":["2023-10-21","2023-10-22"]
-        private List<Integer> weathercode;         // Corresponds to "weathercode":[80,3]
+        private List<String> time;
+        private List<Integer> weathercode;
 
         // Constructors, getters, setters for Daily omitted for brevity
     }

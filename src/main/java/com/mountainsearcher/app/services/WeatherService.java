@@ -3,10 +3,11 @@ import java.util.concurrent.CompletableFuture;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.mountainsearcher.app.models.WeatherResponse;
+import com.mountainsearcher.app.models.Mountain;
 
 public class WeatherService {
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private static final RestTemplate restTemplate = new RestTemplate();
 
     // public WeatherService() {
     //     this.restTemplate = new RestTemplate();
@@ -21,11 +22,11 @@ public class WeatherService {
     //         .map(CompletableFuture::join)
     //         .collect(Collectors.toList());
     // }
-    public static GetWeatherData(){
+    public static void GetWeatherData(Mountain mountain){
         String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
             + "&longitude=" + mountain.getLongitude()
             + "&daily=weathercode&timezone=auto";
-        String result = restTemplate.getForObject(apiuri, WeatherResponse.class);
+        String result = restTemplate.getForObject(apiUrl, WeatherResponse.class);
         System.out.println(result);
     }
     //define object

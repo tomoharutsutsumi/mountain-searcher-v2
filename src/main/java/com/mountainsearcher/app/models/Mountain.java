@@ -24,7 +24,7 @@ public class Mountain {
         // this.hasTentSite = hasTentSite;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.height = height
+        this.height = height;
     }
 
     public Mountain() {
@@ -59,19 +59,11 @@ public class Mountain {
         return height;
     }
 
-    // public void setName(String name) {
-    //     if (name != null && name.length() <= 50) {
-    //         this.name = name;
-    //     } else {
-    //         throw new IllegalArgumentException("Name should be non-null and up to 20 characters.");
-    //     }
-    // }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    // public void setPrefecture(String prefecture) {
-    //     if (prefecture != null && prefecture.length() <= 50) {
-    //         this.prefecture = prefecture;
-    //     } else {
-    //         throw new IllegalArgumentException("Prefecture should be non-null and up to 20 characters.");
-    //     }
-    // }
+    public void setPrefecture(String prefecture) {
+        this.prefecture = prefecture;
+    }
 }
