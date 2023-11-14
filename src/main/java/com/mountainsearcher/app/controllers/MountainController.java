@@ -15,8 +15,8 @@ public class MountainController {
     @Autowired
     private MountainRepository mountainRepository;
 
-    // @Autowired
-    // private WeatherService weatherService;
+    @Autowired
+    private WeatherService weatherService;
 
     @GetMapping("/")
     public String home(Model model) {
