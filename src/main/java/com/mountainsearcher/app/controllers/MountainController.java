@@ -26,7 +26,10 @@ public class MountainController {
 
     @GetMapping("/search")
     public String search(Model model) {
-        WeatherService.GetWeatherData();
+        List<Mountain> mountains = mountainRepository.findAll();
+        for (Mountain mountain : mountains) {
+            weatherService.GetWeatherData(mountain);
+        }
         // model.addAttribute("mountains", mountainRepository.findAll());
         // return "home";
     }
