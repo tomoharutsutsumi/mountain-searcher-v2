@@ -31,7 +31,7 @@ public class MountainController {
             weatherService.GetWeatherData(mountain);
         }
         // model.addAttribute("mountains", mountainRepository.findAll());
-        // return "home";
+        return "home";
     }
 }
 
