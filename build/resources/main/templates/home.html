@@ -23,5 +23,35 @@
             </tr>
         </tbody>
     </table>
+    <body>
+        <form action="#" th:action="@{/search}" method="get">
+            <label for="height">Choose height:</label>
+            <select id="height" name="height">
+                <option value="3000">higher than 3000</option>
+                <option value="2000">higher than 2000</option>
+                <option value="1000">higher than 1000</option>
+                <option value="1">lower than 999</option>
+            </select>
+            <label for="distance">Choose the distance from waterfront:</label>
+            <select id="distance" name="distance">
+                <option value="3">more than 3hours</option>
+                <option value="2">2 ~ 3 hours</option>
+                <option value="1">1 ~ 2 hours</option>
+                <option value="0">lower than 1 hours</option>
+            </select>
+            java presenter?=> weather
+            <label for="weather">Choose weather:</label>
+            <select id="weather" name="weather">
+                <option value="3000" selected>sunny</option>
+                <option value="2000">cloudy</option>
+                <option value="1000">rainy</option>
+            </select>
+            <input type="submit" value="Submit">
+            weather
+            far from waterfront
+            high?
+
+        </form>
+    </body>
 </body>
 </html>
