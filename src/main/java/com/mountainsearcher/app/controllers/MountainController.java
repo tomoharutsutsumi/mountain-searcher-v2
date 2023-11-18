@@ -33,7 +33,19 @@ public class MountainController {
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
