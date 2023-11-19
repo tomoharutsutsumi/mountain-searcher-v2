@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import com.mountainsearcher.app.models.WeatherResponse;
 import com.mountainsearcher.app.models.Mountain;
+import org.springframework.stereotype.Service;
 
+@Service
 public class WeatherService {
 
     private static final RestTemplate restTemplate = new RestTemplate();
