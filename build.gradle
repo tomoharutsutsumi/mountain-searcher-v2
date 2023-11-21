@@ -30,3 +30,5 @@ tasks.named('test') {
 task buildAndRun {
     dependsOn 'clean', 'build', 'bootRun'
 }
+// ./gradlew bootRun
+
