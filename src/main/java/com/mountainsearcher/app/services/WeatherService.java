@@ -16,7 +16,7 @@ public class WeatherService {
     @Autowired
     private MountainRepository mountainRepository;
 
-    public static void GetWeatherData(){
+    public static void GetWeatherData(int daysLater){
         List<Mountain> mountains = mountainRepository.findAll();
         for (Mountain mountain : mountains) {
             String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 

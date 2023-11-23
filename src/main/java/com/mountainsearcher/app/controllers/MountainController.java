@@ -26,6 +26,10 @@ public class MountainController {
 
     @GetMapping("/search")
     public String search(Model model) {
+        // calculate the difference between today and sent date
+
+
+
         weatherService.GetWeatherData()
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";
