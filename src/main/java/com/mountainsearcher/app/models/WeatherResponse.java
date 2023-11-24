@@ -32,5 +32,8 @@ public class WeatherResponse {
 
         // Constructors, getters, setters for Daily omitted for brevity
     }
+
+    // getweathercode
+    
     
 }

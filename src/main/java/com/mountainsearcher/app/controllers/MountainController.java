@@ -8,6 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.Arrays;
 import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
 
 @Controller
 public class MountainController {
@@ -25,12 +29,12 @@ public class MountainController {
     }
 
     @GetMapping("/search")
-    public String search(Model model) {
-        // calculate the difference between today and sent date
+    public String search(@RequestParam("daysLater") int targetDay) {
 
-
-
-        weatherService.GetWeatherData()
+        // method to calculate the difference between today and sent date  
+        LocalDate today = LocalDate.now();
+        int dayLater = targetDay - today
+        weatherService.GetWeatherData(dayLater)
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";
     }
