@@ -25,6 +25,8 @@ public class Mountain {
         this.latitude = latitude;
         this.longitude = longitude;
         this.height = height;
+        this.updatedAt = // in 12 hours, the mountain's code don't need to be updated
+        this.weatherCode =
     }
 
     public Mountain() {

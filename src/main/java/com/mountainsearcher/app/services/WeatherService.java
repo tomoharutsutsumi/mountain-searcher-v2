@@ -24,7 +24,7 @@ public class WeatherService {
             + "&daily=weathercode&timezone=auto";
         }
         WeatherResponse result = restTemplate.getForObject(apiUrl, WeatherResponse.class);
-
+        result.getWeatherCode();
         System.out.println(result);
     }
 

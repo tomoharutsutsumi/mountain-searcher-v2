@@ -34,6 +34,8 @@ public class WeatherResponse {
     }
 
     // getweathercode
-    
+    public List<Integer> getWeatherCode() {
+        return daily.weathercode;
+    }
     
 }
