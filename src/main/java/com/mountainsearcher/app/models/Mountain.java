@@ -17,7 +17,8 @@ public class Mountain {
     private String prefecture;
     private int height;
 
-    public Mountain(int id, String name, double latitude, double longitude, String prefecture, int height) {
+    public Mountain(int id, String name, double latitude, double longitude, 
+                    String prefecture, int height, Date updatedAt, int weatherCode ) {
         this.id = id;
         setName(name);
         setPrefecture(prefecture);
@@ -25,8 +26,8 @@ public class Mountain {
         this.latitude = latitude;
         this.longitude = longitude;
         this.height = height;
-        this.updatedAt = // in 12 hours, the mountain's code don't need to be updated
-        this.weatherCode =
+        this.updatedAt = updatedAt // in 12 hours, the mountain's code don't need to be updated
+        this.weatherCode = weatherCode
     }
 
     public Mountain() {
