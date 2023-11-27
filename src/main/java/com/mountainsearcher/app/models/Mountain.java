@@ -69,4 +69,12 @@ public class Mountain {
     public void setPrefecture(String prefecture) {
         this.prefecture = prefecture;
     }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public void setWeatherCode(int weatherCode) {
+        this.weatherCode = weatherCode;
+    }
 }
