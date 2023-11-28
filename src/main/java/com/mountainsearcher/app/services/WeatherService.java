@@ -22,9 +22,11 @@ public class WeatherService {
             String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
             + "&longitude=" + mountain.getLongitude()
             + "&daily=weathercode&timezone=auto";
+            WeatherResponse result = restTemplate.getForObject(apiUrl, WeatherResponse.class);
+            List<Integer> weatherCodeList = result.getWeatherCode();
+            int weatherCodeValue = result.getWeatherCode().get(index);
         }
-        WeatherResponse result = restTemplate.getForObject(apiUrl, WeatherResponse.class);
-        result.getWeatherCode();
+        
         System.out.println(result);
     }
 
