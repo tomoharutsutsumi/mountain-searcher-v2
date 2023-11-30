@@ -34,7 +34,7 @@ public class MountainController {
         // method to calculate the difference between today and sent date  
         LocalDate today = LocalDate.now();
         int dayLater = targetDay - today
-        weatherService.GetWeatherData(dayLater)
+        weatherService.getWeatherData(dayLater)
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";
     }
