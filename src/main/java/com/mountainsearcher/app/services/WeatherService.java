@@ -16,7 +16,7 @@ public class WeatherService {
     @Autowired
     private MountainRepository mountainRepository;
 
-    public static void getWeatherData(int daysLater){
+    public static List<Mountain> getWeatherData(int daysLater){
         List<Mountain> mountains = mountainRepository.findAll();
         for (Mountain mountain : mountains) {
             String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + mountain.getLatitude() 
@@ -24,12 +24,12 @@ public class WeatherService {
             + "&daily=weathercode&timezone=auto";
             WeatherResponse result = restTemplate.getForObject(apiUrl, WeatherResponse.class);
             List<Integer> weatherCodeList = result.getWeatherCode();
-            int weatherCode = result.getWeatherCode().get(index);
+            int weatherCode = result.getWeatherCode().get(dayLater);
             mountain.setWeatherCode(weatherCode);
             mountainRepository.save(mountain);
         }
         
-        System.out.println(result);
+        return mountains;
     }
 
 

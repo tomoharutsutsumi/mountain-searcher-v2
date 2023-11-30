@@ -77,4 +77,8 @@ public class Mountain {
     public void setWeatherCode(int weatherCode) {
         this.weatherCode = weatherCode;
     }
+
+    public static void filterMountains() {
+        // Add code to filter mountains here
+    }
 }
