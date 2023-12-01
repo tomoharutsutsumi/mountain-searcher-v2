@@ -35,6 +35,7 @@ public class MountainController {
         LocalDate today = LocalDate.now();
         int dayLater = targetDay - today
         weatherService.getWeatherData(dayLater)
+        
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";
     }
