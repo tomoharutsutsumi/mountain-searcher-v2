@@ -58,12 +58,15 @@ public class WeatherResponse {
         71, "Snow fall: Slight"
         73, "Snow fall: moderate"
         75, "Snow fall: heavy intensity"
-
-77	Snow grains
-80, 81, 82	Rain showers: Slight, moderate, and violent
-85, 86	Snow showers slight and heavy
-95 	Thunderstorm: Slight or moderate
-96, 99 	Thunderstorm with slight and heavy hail
+        77,	"Snow grains"
+        80, "Rain showers: Slight"
+        81, "Rain showers: moderate"
+        82, "Rain showers: violent"
+        85, "Snow showers slight"
+        86,	"Snow showers slightheavy"
+        95, "Thunderstorm: Slight or moderate"
+        96, "Thunderstorm with slight and heavy hail"
+        99, "Thunderstorm with slight and heavy hail"
     );
     
 }
