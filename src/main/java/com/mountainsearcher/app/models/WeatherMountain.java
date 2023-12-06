@@ -12,3 +12,4 @@ public class WeatherMountain {
     private int day;
 }
 
+//make db
