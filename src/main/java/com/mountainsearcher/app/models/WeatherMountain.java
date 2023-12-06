@@ -9,7 +9,5 @@ import jakarta.persistence.Id;
 public class WeatherMountain {
     private int mountainId;
     private int weatherCode;
-    private int day;
+    private LocalDate date;
 }
-
-//make db

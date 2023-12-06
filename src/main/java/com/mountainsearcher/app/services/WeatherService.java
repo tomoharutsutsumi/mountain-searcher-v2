@@ -25,8 +25,10 @@ public class WeatherService {
             WeatherResponse result = restTemplate.getForObject(apiUrl, WeatherResponse.class);
             List<Integer> weatherCodeList = result.getWeatherCode();
             int weatherCode = result.getWeatherCode().get(dayLater);
-            mountain.setWeatherCode(weatherCode);
-            mountainRepository.save(mountain);
+            WeatherMountain weatherMountain = new WeatherMountain();
+            weatherMountain.setWeatherCode(weatherCode);
+            weatherMountain.setMountainId(mountain.getId());
+            weatherMountainRepository.save(weatherMountain);
         }
         
         return mountains;
