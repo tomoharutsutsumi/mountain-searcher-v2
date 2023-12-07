@@ -9,4 +9,5 @@ public interface MountainRepository extends JpaRepository<Mountain, Integer> {
     boolean existsByName(String name);
 
     List<Mountain> findAll();
+    List<Mountain> findByHeightGreaterThan(int height);
 }

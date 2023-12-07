@@ -3,6 +3,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import com.mountainsearcher.app.repositories.MountainRepository;
 
 @Entity
 public class Mountain {
@@ -30,6 +31,8 @@ public class Mountain {
         this.updatedAt = updatedAt // in 12 hours, the mountain's code don't need to be updated
         this.weatherCode = weatherCode
     }
+
+    private MountainRepository mountainRepository;
 
     public Mountain() {
         // Default constructor
@@ -79,7 +82,7 @@ public class Mountain {
         this.weatherCode = weatherCode;
     }
 
-    public static void filterMountains() {
-        // Add code to filter mountains here
+    public static void filterMountains(int height) {
+        MountainRepository.findByHeightGreaterThan(height);
     }
 }
