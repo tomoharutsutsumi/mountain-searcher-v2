@@ -82,7 +82,7 @@ public class Mountain {
         this.weatherCode = weatherCode;
     }
 
-    public static void filterMountains(int height) {
-        MountainRepository.findByHeightGreaterThan(height);
+    public static void filterMountains(int height, Date date, int distance) {
+        List<Mountain> mountains = MountainRepository.findByHeightGreaterThan(height);
     }
 }
