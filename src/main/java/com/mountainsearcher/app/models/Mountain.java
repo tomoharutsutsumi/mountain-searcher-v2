@@ -88,6 +88,20 @@ public class Mountain {
 
     public static void filterMountains(int height, Date date, int distance) {
         List<Mountain> mountains = MountainRepository.findByHeightGreaterThan(height);
+    }
 
-    }    
+     
+    public static int returnHeightConstant(int height){
+        if (height === HigherThan3000) {
+            return HigherThan3000
+        } else if (height === HigherThan2000) {
+            return HigherThan2000
+        } else if (height === HigherThan1000) {
+            return HigherThan1000
+        } else if (height === LowerThan1000) {
+            return LowerThan1000
+        } else {
+            throw new Error("Not defined constant height");
+        }
+    }        
 }
