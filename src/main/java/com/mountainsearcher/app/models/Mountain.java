@@ -31,6 +31,10 @@ public class Mountain {
         this.updatedAt = updatedAt // in 12 hours, the mountain's code don't need to be updated
         this.weatherCode = weatherCode
     }
+    private static final int HigherThan3000 = 4;
+    private static final int HigherThan2000 = 3;
+    private static final int HigherThan1000 = 2;
+    private static final int LowerThan1000 = 1;
 
     private MountainRepository mountainRepository;
 
@@ -84,5 +88,6 @@ public class Mountain {
 
     public static void filterMountains(int height, Date date, int distance) {
         List<Mountain> mountains = MountainRepository.findByHeightGreaterThan(height);
-    }
+
+    }    
 }
