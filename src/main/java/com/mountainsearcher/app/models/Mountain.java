@@ -31,10 +31,10 @@ public class Mountain {
         this.updatedAt = updatedAt // in 12 hours, the mountain's code don't need to be updated
         this.weatherCode = weatherCode
     }
-    private static final int HigherThan3000 = 4;
-    private static final int HigherThan2000 = 3;
-    private static final int HigherThan1000 = 2;
-    private static final int LowerThan1000 = 1;
+    // private static final int HigherThan3000 = 4;
+    // private static final int HigherThan2000 = 3;
+    // private static final int HigherThan1000 = 2;
+    // private static final int LowerThan1000 = 1;
 
     private MountainRepository mountainRepository;
 
@@ -91,17 +91,17 @@ public class Mountain {
     }
 
      
-    public static int returnHeightConstant(int height){
-        if (height === HigherThan3000) {
-            return HigherThan3000
-        } else if (height === HigherThan2000) {
-            return HigherThan2000
-        } else if (height === HigherThan1000) {
-            return HigherThan1000
-        } else if (height === LowerThan1000) {
-            return LowerThan1000
-        } else {
-            throw new Error("Not defined constant height");
-        }
-    }        
+    // private static int returnHeightConstant(int height){
+    //     if (height === HigherThan3000) {
+    //         return HigherThan3000
+    //     } else if (height === HigherThan2000) {
+    //         return HigherThan2000
+    //     } else if (height === HigherThan1000) {
+    //         return HigherThan1000
+    //     } else if (height === LowerThan1000) {
+    //         return LowerThan1000
+    //     } else {
+    //         throw new Error("Not defined constant height");
+    //     }
+    // }        
 }
