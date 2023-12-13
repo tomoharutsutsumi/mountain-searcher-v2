@@ -22,6 +22,9 @@ public class MountainController {
     @Autowired
     private WeatherService weatherService;
 
+    @Autowired
+    private Mountain mountain;
+
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("mountains", mountainRepository.findAll());
@@ -35,6 +38,7 @@ public class MountainController {
         LocalDate today = LocalDate.now();
         int dayLater = targetDay - today
         weatherService.getWeatherData(dayLater)
+        mountain.filterMountains(height, daysLater)
         
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";

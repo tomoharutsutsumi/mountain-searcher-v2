@@ -86,19 +86,19 @@ public class Mountain {
         this.weatherCode = weatherCode;
     }
 
-    public static void filterMountains(int height, Date date, int distance) {
-        List<Mountain> mountains = MountainRepository.findByHeight(height);
+    public static void filterMountains(int height, int dayLater, int distance) {
+        List<Mountain> mountains = findByHeight(height);
     }
 
     private static List<Mountain> findByHeight(int height) {
         if (height >= 3000) {
-            return findByHeightBetween(height, 8000);
+            return mountainRepository.findByHeightBetween(height, 8000);
         } else if (height >= 2000) {
-            return findByHeightBetween(height, 2999);
+            return mountainRepository.findByHeightBetween(height, 2999);
         } else if (height > 1000) {
-            return findByHeightBetween(height, 1999);
+            return mountainRepository.findByHeightBetween(height, 1999);
         } else if (height < 1000) {
-            return findByHeightBetween(0, 999);
+            return mountainRepository.findByHeightBetween(0, 999);
         } else {
             throw new Error("Not defined constant height");
         }
