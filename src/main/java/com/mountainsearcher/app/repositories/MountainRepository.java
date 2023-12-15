@@ -11,4 +11,5 @@ public interface MountainRepository extends JpaRepository<Mountain, Integer> {
     List<Mountain> findAll();
     // List<Mountain> findByHeightGreaterThan(int height);
     List<Mountain> findByHeightBetween(minHeight, maxHeight);
+    List<Mountain> findByWeatherMountainAndDate(int weather, Date date);
 }
