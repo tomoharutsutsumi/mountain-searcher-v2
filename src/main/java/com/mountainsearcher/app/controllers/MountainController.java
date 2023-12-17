@@ -40,6 +40,7 @@ public class MountainController {
         weatherService.getWeatherData(dayLater)
         mountains = mountain.filterMountains(height, daysLater)
         
+        
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";
     }
