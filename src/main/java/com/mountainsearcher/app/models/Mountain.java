@@ -19,7 +19,7 @@ public class Mountain {
     private int height;
 
     public Mountain(int id, String name, double latitude, double longitude, 
-                    String prefecture, int height, Date updatedAt, int weatherCode ) {
+                    String prefecture, int height, Date updatedAt, int weatherCode, int distance) {
                         // weathercode is not here. weatehr mountain java
         this.id = id;
         setName(name);
