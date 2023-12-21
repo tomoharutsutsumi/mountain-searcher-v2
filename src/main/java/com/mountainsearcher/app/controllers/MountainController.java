@@ -32,14 +32,12 @@ public class MountainController {
     }
 
     @GetMapping("/search")
-    public String search(@RequestParam("daysLater") int targetDay) {
-
+    public String search(@RequestParam("daysLater") int daysLater, @RequestParam("distance") int distance) {
         // method to calculate the difference between today and sent date  
         LocalDate today = LocalDate.now();
-        int dayLater = targetDay - today
-        weatherService.getWeatherData(dayLater)
-        mountains = mountain.filterMountains(height, daysLater)
-        
+        int dayLater = targetDay - today;
+        weatherService.getWeatherData(dayLater);
+        mountains = mountain.filterMountains(height, dayLater, distance);
         
         // model.addAttribute("mountains", mountainRepository.findAll());
         return "home";
